@@ -20,6 +20,10 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 </head>
 
 <body>
@@ -41,28 +45,27 @@
     
     <!-- this is the home section which includes a little intoduction and the picture -->
    
-    <section id="home">
-      <div class="home-container">
-      <div class="text-container">
-        <!-- Text Block -->
-          <h1>Hello! I'm Fatima Mansha.</h1>
-          <h2>A Bit About Me</h2>
-          <p>
-            I’m a software engineer who loves building innovative applications with Java, C++, and SQL.
-             I enjoy turning ideas into real solutions, exploring new technologies, and creating projects
-              that make an impact. In my free time, I love traveling and discovering new places.
-          </p>
+   <section id="home">
+  <div class="home-container">
     
-          </div>
-        <!-- Image Block -->
-        <div class="profile-image">
-          <img src="img/mypic.png" alt="Fatima Mansha" class="profile-pic">
-        </div>
-        
-      </div>
-    </section>
+    <!-- Text Block -->
+    <div class="home-text">
+      <h1 id="homeH1">Hello! I'm Fatima Mansha.</h1>
+      <h2 id="homeH2">A Bit About Me</h2>
+      <p>
+        I’m a Computer Science student with a strong interest in building applications using Java, C++, and SQL. I enjoy learning how different technologies work together and applying what I learn in projects that solve real problems. I’m always curious about exploring new tools and techniques, and I see every project as a chance to grow my skills. Outside of my studies, I enjoy traveling and discovering new places, which inspires me to bring fresh perspectives into my work.
+      </p>
+    </div>
 
-    <!-- Projects Section (placeholder for later) -->
+    <!-- Image Block -->
+    <div class="profile-image">
+      <img src="img/mypic.png" alt="Fatima Mansha" class="profile-pic">
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects Section (placeholder for later) -->
     
       <section id="projects">
   <h2>Projects</h2>
@@ -96,108 +99,137 @@
 </section>
     
 
-    <!-- Contact Section (placeholder for later) -->
     <section id="skills">
   <h2>Skills</h2>
+  <div class="skills-container">
 
-  <!-- Programming Languages -->
-  <div class="skills-category">
-    <h3>Programming</h3>
-    <ul class="skills-list">
-      <li>C++</li>
-      <li>Java</li>
-      <li>Python</li>
-    </ul>
-  </div>
+    <div class="skills-card">
+      <h3>Programming</h3>
+      <div class="skill">
+        <p>C++</p>
+        <div class="progress-bar">
+          <div class="progress" data-progress="90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Java</p>
+        <div class="progress-bar">
+          <div class="progress" data-progress="80%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Python</p>
+        <div class="progress-bar">
+          <div class="progress" data-progress="70%"></div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Technologies & Tools -->
-  <div class="skills-category">
-  <h3>Technologies & Tools</h3>
-  <ul class="skills-list">
-    <li><img src="img/githubb.png" alt="GitHub Logo" class="skill-logo"> Git / GitHub</li>
-    <li><img src="img/intellijj.png" alt="IntelliJ Logo" class="skill-logo"> IntelliJ IDEA</li>
-    <li><img src="img/vss.png" alt="Visual Studio Logo" class="skill-logo"> Visual Studio</li>
-    <li><img src="img/netbeanss.png" alt="NetBeans Logo" class="skill-logo"> NetBeans</li>
-    <li><img src="img/pycharmm.png" alt="PyCharm Logo" class="skill-logo"> PyCharm</li>
-    <li><img src="img/mysqll.png" alt="MySQL Logo" class="skill-logo"> MySQL</li>
-    <li><img src="img/flaskk.png" alt="Flask Logo" class="skill-logo"> Flask</li>
-  </ul>
-</div>
+    <div class="skills-card">
+      <h3>Tools & Technologies</h3>
+      <ul class="skills-list tools-list">
+        <li><i class="fab fa-github"></i> GitHub</li>
+        <li><i class="fas fa-code"></i> IntelliJ IDEA</li>
+        <li><i class="fas fa-python"></i> PyCharm</li>
+        <li><i class="fas fa-window-maximize"></i> Visual Studio</li>
+        <li><i class="fas fa-database"></i> MySQL</li>
+        <li><i class="fas fa-cogs"></i> NetBeans</li>
+      </ul>
+    </div>
 
-  <!-- Certifications -->
-  <div class="skills-category">
-    <h3>Certifications</h3>
-    <ul class="skills-list">
-      <li>JPMorgan Chase & Co. – Software Engineering Lite (Forage, 2024)</li>
-    </ul>
-  </div>
+    <div class="skills-card">
+      <h3>Certifications</h3>
+      <ul class="skills-list">
+        <li>JPMorgan Chase & Co. – Software Engineering Lite (Forage, 2024)</li>
+      </ul>
+    </div>
 
-  <!-- Spoken Languages -->
-  <div class="skills-category">
-    <h3>Languages</h3>
-    <ul class="skills-list">
-      <li>English</li>
-      <li>Urdu</li>
-    </ul>
+    <div class="skills-card">
+      <h3>Languages</h3>
+      <ul class="skills-list">
+        <li>English</li>
+        <li>Urdu</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 
-    <section id="education">
+  <section id="education">
   <h2>Education</h2>
 
-  <div class="education-container">
-    <!-- Bachelor’s Degree -->
-    <div class="education-card">
+  <div class="timeline">
+    <div class="timeline-item">
       <h3>City University of New York, College of Staten Island</h3>
       <p><strong>Bachelor of Science in Computer Science</strong></p>
       <p>Expected Graduation: December 2025</p>
-      <p>GPA: 3.9</p>
-      <p><strong>Relevant Coursework:</strong> Discrete Structures & Algorithms, C++ Programming, Database Fundamentals (SQL), Data Structures, Algorithms, Object-Oriented Software Design, Computer Networking & Security, Robotic Explorations, Digital System Design, Software Engineering, Linear Algebra, Data Science, Operating Systems</p>
+      <p>
+        I’ve been diving deep into programming, databases, and algorithms. I enjoy building projects that challenge my skills and help me learn new concepts every day.
+      </p>
     </div>
 
-    <!-- Entry-Level Cybersecurity Course -->
-    <div class="education-card">
-      <h3>Entry-Level Cybersecurity Course</h3>
+    <div class="timeline-item">
+      <h3>Intro Cybersecurity</h3>
       <p><strong>CodePath</strong></p>
       <p>Expected Completion: December 2025</p>
+      <p>
+        Currently learning the basics of cybersecurity, exploring how to protect applications, and understanding system vulnerabilities.
+      </p>
     </div>
   </div>
 </section>
 
 
-    <section id="contact">
+   <section id="contact">
   <h2>Contact Me</h2>
-  <p>If you’d like to get in touch, feel free to reach out via email or connect with me on LinkedIn and GitHub.</p>
+  <p>If you’d like to get in touch, just click an icon below or use the form.</p>
 
   <div class="contact-container">
     <!-- Email -->
-    <div class="contact-card">
-      <h3>Email</h3>
-      <p><a href="mailto:fatimamansha@outlook.com">fatimamansha@outlook.com</a></p>
-    </div>
+<div class="contact-card">
+  <a href="mailto:fatimamansha@outlook.com" target="_blank">
+    <i class="fas fa-envelope contact-icon email-icon"></i>
+    <span class="sr-only">Email Fatima</span>
+  </a>
+  <h3>Email</h3>
+</div>
 
     <!-- LinkedIn -->
-    <div class="contact-card">
-      <h3>LinkedIn</h3>
-      <p><a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank">linkedin.com/in/fatima-mansha</a></p>
-    </div>
+<div class="contact-card">
+  <a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank">
+    <i class="fab fa-linkedin contact-icon linkedin-icon"></i>
+    <span class="sr-only">Visit Fatima on LinkedIn</span>
+  </a>
+  <h3>LinkedIn</h3>
+</div>
 
-    <!-- GitHub -->
-    <div class="contact-card">
-      <h3>GitHub</h3>
-      <p><a href="https://github.com/FatimaMansha1996" target="_blank">github.com/FatimaMansha1996</a></p>
-    </div>
+<!-- GitHub -->
+<div class="contact-card">
+  <a href="https://github.com/FatimaMansha1996" target="_blank">
+    <i class="fab fa-github contact-icon github-icon"></i>
+    <span class="sr-only">Visit Fatima on GitHub</span>
+  </a>
+  <h3>GitHub</h3>
+</div>
+
   </div>
+
 </section>
 
 
   </main>
 
-  <!-- Footer -->
   <footer>
-  </footer>
+  <p>&copy; 2025 Fatima Mansha. All rights reserved.</p>
+  <div class="footer-icons">
+    <a href="https://github.com/FatimaMansha1996" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:fatimamansha@outlook.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
 
+<script src="js/app.js"></script>
 </body>
 
 </html>
