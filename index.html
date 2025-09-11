@@ -28,95 +28,199 @@
 
 <body>
 
-  <!--this is the header of the website. which include my name on the left and the navigation bar on the right -->
-   <header>
-    <h1>Fatima Mansha</h1>
-    <nav>
-      <a href="#home">About me</a> 
-      <a href="#projects">Projects</a> 
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- =========================
+     HEADER SECTION
+     This is the top section of the website, visible on all pages.
+     It includes:
+       1. Website/Portfolio Name on the left
+       2. Navigation menu on the right
+========================== -->
+<header>
+  
+  <!-- Website/Portfolio Name -->
+  <h1>Fatima Mansha</h1>
+  
+  <!-- Navigation Menu -->
+  <nav>
+    <!-- Each anchor links to a different section of the page -->
+    <a href="#home">About me</a> 
+    <a href="#projects">Projects</a> 
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+</header>
+
 
   <!-- Main Content -->
   <main>
     
-    <!-- this is the home section which includes a little intoduction and the picture -->
-   
-   <section id="home">
+   <!-- =========================
+     HOME SECTION
+     This is the first main section visible on the homepage.
+     It includes:
+       1. Introduction text about Fatima Mansha
+       2. Profile picture
+       3. Quick navigation buttons to other sections
+========================== -->
+<section id="home">
+
+  <!-- Container for text and image, allows side-by-side layout -->
   <div class="home-container">
-    
-    <!-- Text Block -->
+
+    <!-- =========================
+         TEXT BLOCK
+         Includes main headings and a brief introduction paragraph
+    ========================== -->
     <div class="home-text">
+      <!-- Main greeting heading -->
       <h1 id="homeH1">Hello! I'm Fatima Mansha.</h1>
+      
+      <!-- Subheading -->
       <h2 id="homeH2">A Bit About Me</h2>
+      
+      <!-- Introduction paragraph -->
       <p>
         I’m a Computer Science student with a strong interest in building applications using Java, C++, and SQL. I enjoy learning how different technologies work together and applying what I learn in projects that solve real problems. I’m always curious about exploring new tools and techniques, and I see every project as a chance to grow my skills. Outside of my studies, I enjoy traveling and discovering new places, which inspires me to bring fresh perspectives into my work.
       </p>
     </div>
 
-    <!-- Image Block -->
+    <!-- =========================
+         IMAGE BLOCK
+         Displays Fatima's profile picture next to the text
+    ========================== -->
     <div class="profile-image">
       <img src="img/mypic.png" alt="Fatima Mansha" class="profile-pic">
     </div>
 
+  </div> <!-- End of home-container -->
+
+  <!-- =========================
+       QUICK NAVIGATION BUTTONS
+       Buttons linking to other sections of the portfolio
+  ========================== -->
+  <div class="home-buttons">
+    <div class="pbutton">
+      <a href="#projects" class="button" target="_blank">Projects</a>
+    </div>
+    <div class="sbutton">
+      <a href="#skills" class="button" target="_blank">Skills</a>
+    </div>
+    <div class="ebutton">
+      <a href="#education" class="button" target="_blank">Education</a>
+    </div>
+    <div class="cbutton">
+      <a href="#contact" class="button" target="_blank">Contact</a>
+    </div>
   </div>
+
 </section>
 
-<!-- Projects Section (placeholder for later) -->
-    
-      <section id="projects">
+<!-- =========================
+     PROJECTS SECTION
+     Showcases key projects demonstrating software engineering, machine learning, 
+     and game development skills. Each project includes an image, title, description,
+     and a link to view the project on GitHub.
+========================== -->
+<section id="projects">
+
+  <!-- Section Heading -->
   <h2>Projects</h2>
+  
+  <!-- Section Description -->
   <p>Some of my key projects highlighting software engineering, machine learning, and game development experience.</p>
 
+  <!-- Container for all project cards -->
   <div class="projects-container">
-    <!-- Flight Price Prediction Web App -->
+
+    <!-- =========================
+         Project 1: Flight Price Prediction Web App
+         - Image of the project
+         - Project title
+         - Brief description
+         - Link to GitHub repository
+    ========================== -->
     <div class="project-card">
       <img src="img/flight.png" alt="Flight Price Prediction">
       <h3>Flight Price Prediction Web App</h3>
-      <p> I have built a Flask-based web app to predict flight prices and durations using real-world flight data. Trained multiple machine learning models (Linear Regression, Random Forest, XGBoost) and selected Random Forest achieving 98% accuracy. Developed a responsive frontend and deployed the model via a Flask API for live predictions.</p>
+      <p>
+        I have built a Flask-based web app to predict flight prices and durations using real-world flight data. Trained multiple machine learning models (Linear Regression, Random Forest, XGBoost) and selected Random Forest achieving 98% accuracy. Developed a responsive frontend and deployed the model via a Flask API for live predictions.
+      </p>
       <a href="https://github.com/FatimaMansha1996/Flight-Fare-Prediction-Model" class="button" target="_blank">View Project</a>
     </div>
 
-    <!-- Student Management System -->
+    <!-- =========================
+         Project 2: Student Management System
+         - Image of the project
+         - Project title
+         - Brief description
+         - Link to GitHub repository
+    ========================== -->
     <div class="project-card">
       <img src="img/studentP.PNG" alt="Student Management System">
       <h3>Student Management System</h3>
-      <p>Designed and developed a Student Management System using Java Swing and MySQL (XAMPP). Enabled admins to efficiently manage students, teachers, courses, and records with full CRUD operations. Built a user-friendly UI with secure access control and documented the system for future scalability.</p>
+      <p>
+        Designed and developed a Student Management System using Java Swing and MySQL (XAMPP). Enabled admins to efficiently manage students, teachers, courses, and records with full CRUD operations. Built a user-friendly UI with secure access control and documented the system for future scalability.
+      </p>
       <a href="https://github.com/FatimaMansha1996/Student-Management-System" class="button" target="_blank">View Project</a>
     </div>
 
-    <!-- Shape 'n' Pair -->
+    <!-- =========================
+         Project 3: Shape 'n' Pair Game
+         - Image of the project
+         - Project title
+         - Brief description
+         - Link to GitHub repository
+    ========================== -->
     <div class="project-card">
       <img src="img/shape.png" alt="Shape 'n' Pair Game">
       <h3>Shape 'n' Pair</h3>
-      <p>Created “Shape 'n' Pair”, a tile-matching game with single-player and two-player modes using JavaFX and IntelliJ. Implemented interactive UI, score tracking, turn-based multiplayer mode, and restart options. Codebase includes comprehensive Javadoc documentation for maintainability.</p>
+      <p>
+        Created “Shape 'n' Pair”, a tile-matching game with single-player and two-player modes using JavaFX and IntelliJ. Implemented interactive UI, score tracking, turn-based multiplayer mode, and restart options. Codebase includes comprehensive Javadoc documentation for maintainability.
+      </p>
       <a href="https://github.com/FatimaMansha1996/ShapeNPair" class="button" target="_blank">View Project</a>
     </div>
-  </div>
-</section>
-    
 
-    <section id="skills">
+  </div> <!-- End of projects-container -->
+
+</section>
+
+    <!-- =========================
+     SKILLS SECTION
+     Highlights Fatima's technical skills, tools, certifications, and languages.
+     Structured with multiple cards for easy readability.
+========================== -->
+<section id="skills">
+
+  <!-- Section Heading -->
   <h2>Skills</h2>
+
+  <!-- Container for all skills cards -->
   <div class="skills-container">
 
+    <!-- =========================
+         Skills Card 1: Programming Languages
+         Displays progress bars for programming skills
+    ========================== -->
     <div class="skills-card">
       <h3>Programming</h3>
+
+      <!-- Individual skill with progress bar -->
       <div class="skill">
         <p>C++</p>
         <div class="progress-bar">
           <div class="progress" data-progress="90%"></div>
         </div>
       </div>
+
       <div class="skill">
         <p>Java</p>
         <div class="progress-bar">
           <div class="progress" data-progress="80%"></div>
         </div>
       </div>
+
       <div class="skill">
         <p>Python</p>
         <div class="progress-bar">
@@ -125,6 +229,10 @@
       </div>
     </div>
 
+    <!-- =========================
+         Skills Card 2: Tools & Technologies
+         Lists software, IDEs, and other technologies with icons
+    ========================== -->
     <div class="skills-card">
       <h3>Tools & Technologies</h3>
       <ul class="skills-list tools-list">
@@ -137,6 +245,10 @@
       </ul>
     </div>
 
+    <!-- =========================
+         Skills Card 3: Certifications
+         Lists professional certifications
+    ========================== -->
     <div class="skills-card">
       <h3>Certifications</h3>
       <ul class="skills-list">
@@ -144,6 +256,10 @@
       </ul>
     </div>
 
+    <!-- =========================
+         Skills Card 4: Languages
+         Lists spoken/written languages
+    ========================== -->
     <div class="skills-card">
       <h3>Languages</h3>
       <ul class="skills-list">
@@ -152,14 +268,32 @@
       </ul>
     </div>
 
-  </div>
+  </div> <!-- End of skills-container -->
+
 </section>
 
 
-  <section id="education">
+
+ <!-- =========================
+     EDUCATION SECTION
+     Displays academic background and relevant courses.
+     Uses a timeline format to highlight institutions, degrees, and key details.
+========================== -->
+<section id="education">
+
+  <!-- Section Heading -->
   <h2>Education</h2>
 
+  <!-- Timeline container for education entries -->
   <div class="timeline">
+
+    <!-- =========================
+         Timeline Item 1: University Degree
+         - Institution Name
+         - Degree & Field
+         - Expected graduation date
+         - Short description of academic focus and interests
+    ========================== -->
     <div class="timeline-item">
       <h3>City University of New York, College of Staten Island</h3>
       <p><strong>Bachelor of Science in Computer Science</strong></p>
@@ -169,6 +303,13 @@
       </p>
     </div>
 
+    <!-- =========================
+         Timeline Item 2: Online Course / Certification
+         - Course Name
+         - Platform
+         - Expected completion date
+         - Short description of focus and learning goals
+    ========================== -->
     <div class="timeline-item">
       <h3>Intro Cybersecurity</h3>
       <p><strong>CodePath</strong></p>
@@ -177,51 +318,83 @@
         Currently learning the basics of cybersecurity, exploring how to protect applications, and understanding system vulnerabilities.
       </p>
     </div>
-  </div>
+
+  </div> <!-- End of timeline container -->
+
 </section>
 
 
-   <section id="contact">
+
+   <!-- =========================
+     CONTACT SECTION
+     Allows visitors to reach out to Fatima via email, LinkedIn, or GitHub.
+     Each contact method is displayed as a clickable card with icon and label.
+========================== -->
+<section id="contact">
+
+  <!-- Section Heading -->
   <h2>Contact Me</h2>
   <p>If you’d like to get in touch, just click an icon below or use the form.</p>
 
+  <!-- Container for all contact cards -->
   <div class="contact-container">
-    <!-- Email -->
-<div class="contact-card">
-  <a href="mailto:fatimamansha@outlook.com" target="_blank">
-    <i class="fas fa-envelope contact-icon email-icon"></i>
-    <span class="sr-only">Email Fatima</span>
-  </a>
-  <h3>Email</h3>
-</div>
 
-    <!-- LinkedIn -->
-<div class="contact-card">
-  <a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank">
-    <i class="fab fa-linkedin contact-icon linkedin-icon"></i>
-    <span class="sr-only">Visit Fatima on LinkedIn</span>
-  </a>
-  <h3>LinkedIn</h3>
-</div>
+    <!-- =========================
+         Contact Card: Email
+         - Clickable mailto link
+         - Icon for email
+         - Accessible text for screen readers
+    ========================== -->
+    <div class="contact-card">
+      <a href="mailto:fatimamansha@outlook.com" target="_blank">
+        <i class="fas fa-envelope contact-icon email-icon"></i>
+        <span class="sr-only">Email Fatima</span>
+      </a>
+      <h3>Email</h3>
+    </div>
 
-<!-- GitHub -->
-<div class="contact-card">
-  <a href="https://github.com/FatimaMansha1996" target="_blank">
-    <i class="fab fa-github contact-icon github-icon"></i>
-    <span class="sr-only">Visit Fatima on GitHub</span>
-  </a>
-  <h3>GitHub</h3>
-</div>
+    <!-- =========================
+         Contact Card: LinkedIn
+         - Clickable link to LinkedIn profile
+         - Icon for LinkedIn
+         - Accessible text for screen readers
+    ========================== -->
+    <div class="contact-card">
+      <a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank">
+        <i class="fab fa-linkedin contact-icon linkedin-icon"></i>
+        <span class="sr-only">Visit Fatima on LinkedIn</span>
+      </a>
+      <h3>LinkedIn</h3>
+    </div>
 
-  </div>
+    <!-- =========================
+         Contact Card: GitHub
+         - Clickable link to GitHub profile
+         - Icon for GitHub
+         - Accessible text for screen readers
+    ========================== -->
+    <div class="contact-card">
+      <a href="https://github.com/FatimaMansha1996" target="_blank">
+        <i class="fab fa-github contact-icon github-icon"></i>
+        <span class="sr-only">Visit Fatima on GitHub</span>
+      </a>
+      <h3>GitHub</h3>
+    </div>
+
+  </div> <!-- End of contact-container -->
 
 </section>
 
+</main>
 
-  </main>
-
-  <footer>
+<!-- =========================
+     FOOTER
+     Displays copyright info and quick links to GitHub, LinkedIn, and Email.
+========================== -->
+<footer>
   <p>&copy; 2025 Fatima Mansha. All rights reserved.</p>
+
+  <!-- Footer icons for quick access -->
   <div class="footer-icons">
     <a href="https://github.com/FatimaMansha1996" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/fatima-mansha/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -229,7 +402,17 @@
   </div>
 </footer>
 
-<script src="js/app.js"></script>
-</body>
+<!-- =========================
+     BACK-TO-TOP BUTTON
+     - Button fixed at bottom-right corner
+     - Smoothly scrolls user back to top when clicked
+     - Initially hidden until user scrolls down
+========================== -->
+<button id="backToTop">↑ Top</button>
 
+<!-- Link to external JavaScript file for interactivity -->
+<script src="js/app.js"></script>
+
+
+</body>
 </html>

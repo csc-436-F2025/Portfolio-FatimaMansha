@@ -10,64 +10,81 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+/* ============================= */
+/* CSS Variables for Theme Colors */
+/* ============================= */
 :root {
-  --bg1: #fdf6e3;        /* light cream */
-  --bg2: #e7f0fd;        /* soft blue */
-  --accent: #030303;     /* strong blue */
-  --accent-hover: #0a0a0b; 
-  --muted: #f0f0f0;      /* light grey for cards */
-  --text: #1a1a1a;       /* dark text */
+  --bg1: #fdf6e3;        /* main background color (light cream) */
+  --bg2: #e7f0fd;        /* secondary background (soft blue) */
+  --accent: #030303;     /* primary accent color (dark) */
+  --accent-hover: #0a0a0b; /* hover accent color */
+  --muted: #f0f0f0;      /* muted color for cards/buttons */
+  --text: #1a1a1a;       /* default text color */
 }
 
-
-   body {
-  background-color: #FFF8E7;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;            /* improves readability */
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
+/* ============================= */
+/* Body Styles */
+/* ============================= */
+body {
+  background: var(--bg1);        /* main page background */
+  font-family: Arial, sans-serif; /* default font */
+  line-height: 1.6;              /* spacing between lines */
+  color: var(--text);            /* default text color */
 }
 
+/* ============================= */
+/* Headings Styles */
+/* ============================= */
 h1 {
-  font-size: 48px;      /* adjust to your preferred size */
-  margin-bottom: 20px;  /* optional spacing below */
+  font-size: 48px;       /* large heading size */
+  margin-bottom: 20px;   /* spacing below heading */
 }
 
-/* Change font size for h2 inside home section */
- h2 {
-  font-size: 32px;      /* adjust to your preferred size */
-  margin-bottom: 15px;
+h2 {
+  font-size: 32px;       /* medium heading size */
+  margin-bottom: 15px;   /* spacing below heading */
 }
- p {
-  font-size: 18px;   
-  line-height: 1.6;  /* optional: makes text easier to read */
+
+p {
+  font-size: 18px;       /* paragraph text size */
+  line-height: 1.6;      /* makes text easier to read */
 }
+
+/* ============================= */
+/* Header Styles */
+/* ============================= */
 header {
-  display: flex;              /* use flexbox */
-  justify-content: space-between; /* name left, nav right */
-  align-items: center;        /* vertically center items */
-  padding: 15px 30px;
-  background-color:#f0f0f0;
-  color: black;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-header h1 {
-  margin: 0;                  /* remove default spacing */
-  font-size: 20px;
+  display: flex;                     /* use flexbox for layout */
+  justify-content: space-between;    /* name on left, nav on right */
+  align-items: center;               /* vertically center items */
+  padding: 15px 30px;                /* spacing inside header */
+  background-color: #f0f0f0;         /* header background */
+  color: black;                      /* header text color */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
+header h1 {
+  margin: 0;           /* remove default spacing */
+  font-size: 20px;     /* header name font size */
+}
+
+/* ============================= */
+/* Header Navigation Links */
+/* ============================= */
 header nav a {
-  color: Black;
-  text-decoration: none;
-  margin-left: 20px;          /* space between links */
-   font-size: 16px;
-  padding: 5px 10px;
+  color: black;          /* link color */
+  text-decoration: none; /* remove underline */
+  margin-left: 20px;     /* space between links */
+  font-size: 16px;       /* link font size */
+  padding: 5px 10px;     /* clickable area padding */
 }
 
 header nav a:hover {
-  color: rgb(125, 43, 226);
+  color: rgb(100, 18, 206); /* link color on hover */
 }
 
+
+/* Home Section Container */
 .home-container {
   max-width: var(--max-width);
   margin: 30px;
@@ -75,16 +92,15 @@ header nav a:hover {
   gap: 50px;
   padding: 50px 20px;
   flex-wrap: wrap;
-   align-items: center;       /* vertically center items */
+  align-items: center;       /* vertically center items */
   justify-content: center;   /* horizontally center items */
 }
 
-/* Text now has no container box */
+/* Home Text Block */
 .home-text {
-  flex: 2 1 400px;
+  flex: 2 1 400px;           /* flexible width, grows twice as much as image */
 }
 
-/* Headings and Paragraph */
 .home-text h1 {
   font-size: 36px;
   margin-bottom: 15px;
@@ -100,7 +116,7 @@ header nav a:hover {
   line-height: 1.6;
 }
 
-/* Profile Image */
+/* Profile Image Block */
 .profile-image {
   flex: 1 1 300px;
   text-align: center;
@@ -110,7 +126,7 @@ header nav a:hover {
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 50%;             /* circular image */
   object-fit: cover;
   border: 4px solid #fdf6e3;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
@@ -118,11 +134,43 @@ header nav a:hover {
 }
 
 .profile-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);         /* slight zoom on hover */
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Responsive */
+/* Home Buttons */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.home-buttons .button {
+  display: inline-block;
+  background: var(--muted);
+  padding: 12px 30px;
+  border-radius: 50px;           /* rounded/pill shape */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-buttons .button:hover {
+  transform: scale(1.05);        /* slight zoom on hover */
+  color: #ffffff;
+  background: #000000;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Responsive Layout for Smaller Screens */
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
@@ -133,177 +181,259 @@ header nav a:hover {
     flex: 1 1 100%;
     text-align: center;
   }
+
+  .home-buttons {
+    align-items: center;
+  }
 }
 
 
-/*Projects designing
-*/
+
+/* ========================
+   Projects Section Styling
+   ======================== */
+
+/* Container for the Projects Section */
 #projects {
-  padding: 60px 20px;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  padding: 60px 20px;          /* Top/Bottom padding 60px, Left/Right 20px */
+  max-width: var(--max-width); /* Maximum width from CSS variable */
+  margin: 0 auto;              /* Center horizontally */
 }
 
+/* Projects Section Title */
 #projects h2 {
-  text-align: center;
-  color: var(--accent);
-  font-size: 36px;
-  margin-bottom: 20px;
+  text-align: center;           /* Centered heading */
+  color: var(--accent);         /* Accent color from CSS variable */
+  font-size: 36px;              /* Font size */
+  margin-bottom: 20px;          /* Space below heading */
 }
 
+/* Projects Section Description */
 #projects p {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: var(--text);
+  text-align: center;           /* Centered paragraph */
+  margin-bottom: 40px;          /* Space below paragraph */
+  font-size: 18px;              /* Font size */
+  color: var(--text);           /* Text color from CSS variable */
 }
 
+/* Container for all project cards */
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: flex;                /* Flex layout */
+  flex-wrap: wrap;              /* Wrap cards to next line on small screens */
+  justify-content: center;      /* Center the cards horizontally */
+  gap: 30px;                    /* Space between cards */
 }
 
+/* Individual Project Card */
 .project-card {
-  background: var(--muted);
-  padding: 25px 30px;
-  border-radius: var(--card-radius);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  width: 300px;
-  text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition);
+  background: var(--muted);                  /* Card background color */
+  padding: 25px 30px;                        /* Inner spacing */
+  border-radius: var(--card-radius);         /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);   /* Subtle shadow */
+  width: 300px;                              /* Fixed card width */
+  text-align: center;                        /* Centered text inside card */
+  border: 2px solid #000000;                 /* Black outline */
+  transition: transform var(--transition),   /* Smooth transform & shadow effect */
+              box-shadow var(--transition);
 }
 
+/* Project Image Styling */
 .project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--card-radius);
-  margin-bottom: 15px;
-  transition: transform var(--transition);
+  width: 100%;                               /* Full card width */
+  height: 180px;                             /* Fixed height */
+  object-fit: cover;                         /* Crop image to fit without distortion */
+  border-radius: var(--card-radius);         /* Rounded corners same as card */
+  margin-bottom: 15px;                       /* Space below image */
+  transition: transform var(--transition);   /* Smooth hover effect */
 }
 
+/* Image Hover Effect */
 .project-card img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);                    /* Slight zoom on hover */
 }
 
+/* Project Card Title */
 .project-card h3 {
-  color: var(--accent-hover);
-  margin-bottom: 10px;
-  font-size: 22px;
+  color: var(--accent-hover);                /* Slightly different accent color on hover */
+  margin-bottom: 10px;                       /* Space below title */
+  font-size: 22px;                           /* Font size */
 }
 
+/* Project Card Description */
 .project-card p {
-  font-size: 16px;
-  color: var(--text);
-  margin-bottom: 15px;
+  font-size: 16px;                           /* Font size */
+  color: var(--text);                        /* Text color */
+  margin-bottom: 15px;                       /* Space below paragraph */
 }
 
+/* Button inside Project Card */
 .project-card .button {
-  display: inline-block;
-  padding: 8px 15px;
-  background: var(--accent);
-  color: #fdf6e3;
-  border-radius: var(--card-radius);
-  text-decoration: none;
-  transition: background var(--transition), transform var(--transition);
+  display: inline-block;                     /* Inline but allows padding */
+  padding: 8px 15px;                         /* Button padding */
+  background: var(--accent);                 /* Button background color */
+  color: #fdf6e3;                            /* Button text color */
+  border-radius: var(--card-radius);         /* Rounded corners */
+  text-decoration: none;                     /* Remove underline */
+  transition: background var(--transition),  /* Smooth background & transform */
+              transform var(--transition);
 }
 
+/* Button Hover Effect */
 .project-card .button:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
+  background: var(--accent-hover);           /* Darker background on hover */
+  transform: translateY(-2px);               /* Slight lift effect */
 }
 
-/* Responsive Design */
+/* Project Card Hover Effect */
+.project-card:hover {
+  transform: translateY(-4px);               /* Lift the card slightly on hover */
+}
+
+/* ========================
+   Responsive Design
+   ======================== */
 @media (max-width: 768px) {
   .projects-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;                  /* Stack cards vertically */
+    align-items: center;                     /* Center cards */
   }
 
   .project-card {
-    width: 90%;
+    width: 90%;                              /* Make cards take most of screen width */
   }
 }
 
-/* Education Section */
+
+/* ========================
+   Education Section Styling
+   ======================== */
+
+/* Container for Education Section */
 #education {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-   margin: 0 auto;
+  padding: 60px 20px;                 /* Top/Bottom padding 60px, Left/Right 20px */
+  background: #f9f9f9;                /* Light gray background */
+  font-family: Arial, sans-serif;     /* Font for text */
+  max-width: 1000px;                  /* Limit width */
+  margin: 0 auto;                     /* Center horizontally */
 }
 
-
+/* Education Section Title */
 #education h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #2c3e50;
+  text-align: center;                 /* Centered heading */
+  margin-bottom: 20px;                /* Space below heading */
+  font-size: 2rem;                    /* Font size */
+  color: #2c3e50;                     /* Dark gray color */
 }
 
-/* Timeline Container */
+/* ========================
+   Timeline Container
+   ======================== */
+
+/* Main Timeline Wrapper */
 .timeline {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 40px;
-  max-width: 800px;
-  border-left: 3px solid #171819; /* Vertical line */
+  position: relative;                 /* Required for pseudo-elements */
+  margin: 0 auto;                     /* Center container */
+  padding-left: 40px;                 /* Space for vertical line */
+  max-width: 800px;                   /* Limit width */
+  border-left: 3px solid #171819;    /* Vertical timeline line */
 }
 
-/* Timeline Items */
+/* ========================
+   Timeline Items
+   ======================== */
+
+/* Individual Timeline Item */
 .timeline-item {
-  position: relative;
-  margin-bottom: 40px;
-  padding-left: 20px;
+  position: relative;                 /* For the circle marker */
+  margin-bottom: 40px;                /* Space between items */
+  padding-left: 20px;                 /* Space from the left for content */
 }
 
+/* Circle Marker for Timeline Item */
 .timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -11px;
-  top: 5px;
-  width: 20px;
-  height: 20px;
-  background: #0f1010;
-  border-radius: 50%;
-  border: 3px solid #0c0c0c;
-  box-shadow: 0 0 0 3px #0d0d0d33;
+  content: "";                        
+  position: absolute;                 
+  left: -11px;                        
+  top: 5px;                           
+  width: 20px;                         
+  height: 20px;                        
+  background: #0f1010;               
+  border-radius: 50%;                  
+  border: 3px solid #0c0c0c;          
+  box-shadow: 0 0 0 3px #0d0d0d33;    
 }
 
-/* Headings */
+/* Timeline Item Headings */
 .timeline-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  color: #222;
+  font-size: 1.3rem;                  
+  margin-bottom: 8px;                 
+  color: #222;                        
 }
 
-/* Paragraphs */
+/* Timeline Item Paragraphs */
 .timeline-item p {
-  margin: 4px 0;
-  line-height: 1.5;
-  color: #555;
+  margin: 4px 0;                       
+  line-height: 1.5;                    
+  color: #555;                         
 }
 
-/* Hover Effect */
+/* Hover Effect for Timeline Items */
 .timeline-item:hover {
-  background: #fdf6e3;
-  border-radius: 8px;
-  padding: 15px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
+  background: #fdf6e3;                 
+  border-radius: 8px;                   
+  padding: 15px 20px;                   
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  transition: 0.3s ease;                
 }
 
-/* Skills Section */
+/* ========================
+   Responsive Design
+   ======================== */
+@media (max-width: 768px) {
+  /* Timeline container on smaller screens */
+  .timeline {
+    padding-left: 20px;                 
+    border-left: 2px solid #171819;    
+  }
+
+  /* Timeline items on small screens */
+  .timeline-item {
+    margin-bottom: 30px;                
+    padding-left: 15px;                 
+  }
+
+  /* Timeline marker adjustment */
+  .timeline-item::before {
+    left: -8px;                          
+    width: 16px;                          
+    height: 16px;
+  }
+
+  /* Adjust headings for mobile */
+  .timeline-item h3 {
+    font-size: 1.1rem;                   
+  }
+
+  /* Adjust paragraphs for mobile */
+  .timeline-item p {
+    font-size: 14px;                      
+  }
+}
+
+
+/* ========================
+   Skills Section
+   ======================== */
+
+/* Main Skills Container */
 #skills {
-  padding: 60px 20px;
-  font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 60px 20px;                  /* Section padding */
+  font-family: Arial, sans-serif;      /* Font */
+  max-width: 1200px;                   /* Limit width */
+  margin: 0 auto;                      /* Center content */
 }
 
+/* Section Title */
 #skills h2 {
   text-align: center;
   color: var(--accent);
@@ -311,7 +441,7 @@ header nav a:hover {
   margin-bottom: 40px;
 }
 
-/* Flex Container for Cards */
+/* Container for all skill cards */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -319,36 +449,38 @@ header nav a:hover {
   justify-content: center;
 }
 
-
 /* Individual Skill Cards */
 .skills-card {
   background: var(--muted);
   padding: 25px 30px;
   border-radius: var(--card-radius);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  flex: 1 1 250px; /* flexible width, min 250px */
+  flex: 1 1 250px;   /* Flexible width, min 250px */
   max-width: 300px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
+/* Card Hover Effect */
 .skills-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* Skill Card Title */
 .skills-card h3 {
   color: var(--accent-hover);
   margin-bottom: 15px;
   font-size: 22px;
 }
 
-/* Skill List Items */
+/* List of Skills */
 .skills-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Individual Skill Item */
 .skills-list li {
   background: #fdf6e3;
   padding: 8px 15px;
@@ -362,12 +494,14 @@ header nav a:hover {
   cursor: default;
 }
 
+/* Hover Effect for Skill Items */
 .skills-list li:hover {
   background: var(--accent);
   color: #fdf6e3;
   transform: translateY(-3px) scale(1.05);
 }
 
+/* Skill Icons */
 .tools-list li i {
   color: var(--accent);
   font-size: 1.2rem;
@@ -379,38 +513,27 @@ header nav a:hover {
   color: #ffffff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-card {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .skills-list li {
-    font-size: 14px;
-    padding: 6px 12px;
-    margin-bottom: 6px;
-  }
-}
-/* Skill Progress Bars */
+/* ========================
+   Skill Progress Bars
+   ======================== */
 .skill {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between name and bar */
+  gap: 10px;
   margin-bottom: 10px;
 }
 
 .skill p {
-  flex: 0 0 80px; /* fixed width for skill name */
+  flex: 0 0 80px;
   margin: 0;
 }
 
 .progress-bar {
-  flex: 1; /* takes remaining horizontal space */
+  flex: 1;
   height: 15px;
   border-radius: 15px;
+  background: #e0e0e0;
 }
-
 
 .progress {
   width: 0;
@@ -420,74 +543,147 @@ header nav a:hover {
   transition: width 1s ease-in-out;
 }
 
+/* ========================
+   Responsive Design
+   ======================== */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .skills-card {
+    max-width: 45%;           /* Two cards per row */
+    flex: 1 1 45%;
+  }
+}
+
+/* Smaller tablets and larger phones */
+@media (max-width: 768px) {
+  .skills-card {
+    max-width: 100%;
+    flex: 1 1 100%;           /* One card per row */
+  }
+
+  .skills-list li {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+  }
+
+  .skill p {
+    flex: 0 0 70px;           /* Smaller skill name width */
+    font-size: 14px;
+  }
+
+  .progress-bar {
+    height: 12px;
+  }
+}
+
+/* Very small screens (phones under 480px) */
+@media (max-width: 480px) {
+  #skills {
+    padding: 40px 15px;       /* Less padding on very small screens */
+  }
+
+  .skills-card {
+    padding: 20px;            /* Smaller card padding */
+  }
+
+  .skills-card h3 {
+    font-size: 20px;          /* Smaller heading */
+  }
+
+  .skill p {
+    flex: 0 0 60px;           /* Even smaller skill name width */
+    font-size: 13px;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+}
+
 /* Contact Section */
 #contact {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 60px 20px;                  /* Section padding */
+  background: #f9f9f9;                 /* Light background */
+  max-width: 1000px;                   /* Limit width */
+  margin: 0 auto;                      /* Center section */
   font-family: Arial, sans-serif;
 }
 
 #contact h2 {
-  text-align: center;
+  text-align: center;                  /* Center title */
   font-size: 36px;
   color: #2c3e50;
   margin-bottom: 20px;
 }
 
 #contact p {
-  text-align: center;
+  text-align: center;                  /* Center description */
   margin-bottom: 40px;
   color: #555;
 }
 
-/* Contact Container */
+/* Container for contact cards */
 .contact-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;             /* Center cards horizontally */
+  gap: 40px;                           /* Space between cards */
+  flex-wrap: wrap;                     /* Wrap on smaller screens */
 }
 
-/* Contact Cards */
+/* Individual contact card */
 .contact-card {
   background: white;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 12px;                 /* Rounded corners */
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Card hover effect */
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* Icons */
+/* Contact icons */
 .contact-icon {
   font-size: 50px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Icon Colors */
-.email-icon { color: #D44638; }    /* Outlook red */
-.linkedin-icon { color: #0077B5; } /* LinkedIn blue */
-.github-icon { color: #333; }      /* GitHub black */
+/* Specific icon colors */
+.email-icon { color: #D44638; }
+.linkedin-icon { color: #0077B5; }
+.github-icon { color: #333; }
 
-/* Hover Effects */
+/* Icon hover effect */
 .contact-card:hover .contact-icon {
   transform: scale(1.2);
-  color: #3498db; /* turns blue on hover */
+  color: #3498db;                     /* Blue on hover */
 }
 
-/* Responsive */
+/* Responsive spacing for smaller screens */
 @media (max-width: 768px) {
   .contact-container {
     gap: 20px;
   }
 }
 
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; 
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background: #000;
+  color: #fff;
+}
 
 /*
  * Remove the gap between audio, canvas, iframes,
