@@ -421,10 +421,6 @@ header nav a:hover {
 }
 
 
-/* ========================
-   Skills Section
-   ======================== */
-
 /* Main Skills Container */
 #skills {
   padding: 60px 20px;                  /* Section padding */
@@ -512,36 +508,61 @@ header nav a:hover {
   transform: scale(1.2);
   color: #ffffff;
 }
+/* programming languges */
 
+.pLanguages-list li i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pLanguages-list li:hover i {
+  transform: scale(1.2);
+  color: #ffffff;
+}
 /* ========================
-   Skill Progress Bars
+   Responsive Design
    ======================== */
-.skill {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+@media (max-width: 768px) {
+  .skills-programming .skills-card {
+    gap: 15px;
+  }
+
+  .skills-programming .skill-icon {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+  }
+
+  .skills-programming .skill-icon i {
+    font-size: 24px;
+  }
+
+  .skills-programming .skill-icon p {
+    font-size: 12px;
+  }
 }
 
-.skill p {
-  flex: 0 0 80px;
-  margin: 0;
+@media (max-width: 480px) {
+  #skills {
+    padding: 40px 15px;
+  }
+
+  .skills-card {
+    padding: 15px;
+  }
+
+  .skills-card h3 {
+    font-size: 20px;
+  }
+
+  .skills-list li {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 }
 
-.progress-bar {
-  flex: 1;
-  height: 15px;
-  border-radius: 15px;
-  background: #e0e0e0;
-}
-
-.progress {
-  width: 0;
-  height: 100%;
-  background: var(--accent);
-  border-radius: 25px;
-  transition: width 1s ease-in-out;
-}
 
 /* ========================
    Responsive Design
@@ -573,9 +594,7 @@ header nav a:hover {
     font-size: 14px;
   }
 
-  .progress-bar {
-    height: 12px;
-  }
+  
 }
 
 /* Very small screens (phones under 480px) */
@@ -597,9 +616,7 @@ header nav a:hover {
     font-size: 13px;
   }
 
-  .progress-bar {
-    height: 10px;
-  }
+  
 }
 
 /* Contact Section */
@@ -639,6 +656,10 @@ header nav a:hover {
   border-radius: 12px;                 /* Rounded corners */
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Card hover effect */
@@ -882,4 +903,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
