@@ -233,6 +233,8 @@ header nav a:hover {
   width: 300px;                              /* Fixed card width */
   text-align: center;                        /* Centered text inside card */
   border: 2px solid #000000;                 /* Black outline */
+  display: flex;                             /* Stack contents vertically */
+  flex-direction: column;                    /* so the button can sit at the bottom */
   transition: transform var(--transition),   /* Smooth transform & shadow effect */
               box-shadow var(--transition);
 }
@@ -274,6 +276,8 @@ header nav a:hover {
   color: #fdf6e3;                            /* Button text color */
   border-radius: var(--card-radius);         /* Rounded corners */
   text-decoration: none;                     /* Remove underline */
+  margin-top: auto;                          /* Push button to the bottom of the card */
+  align-self: center;                        /* Keep button centered, not full width */
   transition: background var(--transition),  /* Smooth background & transform */
               transform var(--transition);
 }
